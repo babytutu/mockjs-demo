@@ -1,14 +1,16 @@
 {
   "name": "mockjs-demo",
   "version": "1.0.0",
-  "description": "",
+  "description": "a simple mockjs demo",
   "main": "index.js",
   "scripts": {
     "start": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "mockjs"
+  ],
+  "author": "babytutu",
   "license": "ISC",
   "dependencies": {
     "koa": "^2.5.1",

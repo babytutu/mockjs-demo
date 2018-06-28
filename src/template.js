@@ -1,10 +1,7 @@
-const Koa = require('koa')
 const Mock = require('mockjs')
-
-const app = new Koa()
 const Random = Mock.Random
 
-const template = {
+module.exports = {
   string: {
     'string1|1-2': 'abc',
     'string2|3': 'abc',
@@ -69,12 +66,3 @@ const template = {
     upper: Random.upper('hello')
   }
 }
-
-app.use(async ctx => {
-  const url = ctx.url.replace('/', '')
-  ctx.body = Mock.mock(template[url] ? template[url] : template)
-})
-
-console.info('open: http://localhost:3000')
-
-app.listen(3000)
